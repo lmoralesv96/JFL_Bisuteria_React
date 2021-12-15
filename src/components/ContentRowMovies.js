@@ -36,16 +36,22 @@ let cartProps = [moviesInDB, totalAwards, actorsQuantity];
 function ContentRowMovies(){
     const [information, setInformation] = useState([]);
 
-    useEffect(async () => {
+    useEffect(() => {
 
             const endPoints = ['/api/users','/api/products']
 
-            const results = await Promise.all(endPoints.map(async endPoints => {
-                const resp = await fetch(endPoints);
-                return resp.json();
-              }));
-              console.log(results);
-              setInformation(results);
+            const fetching = async() => {
+
+                const results = await Promise.all(endPoints.map(async endPoints => {
+                    const resp = await fetch(endPoints);
+                    return resp.json();
+                  }));
+                  console.log(results);
+                  setInformation(results);
+            }
+
+            fetching();
+
 
 	},[])
 
