@@ -38,7 +38,7 @@ function ContentRowMovies(){
 
     useEffect(() => {
 
-            const endPoints = ['/api/users','/api/products']
+            const endPoints = ['/api/users','/api/products', '/api/products/categories']
 
             const fetching = async() => {
 
