@@ -46,7 +46,6 @@ function ContentRowMovies(){
                     const resp = await fetch(endPoints);
                     return resp.json();
                   }));
-                  console.log(results);
                   setInformation(results);
             }
 

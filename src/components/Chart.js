@@ -1,4 +1,5 @@
-import React from 'react';
+import { useState, useEffect } from 'react';
+
 import ChartRow from './ChartRow';
 
 let tableRowsData = [
@@ -21,34 +22,44 @@ let tableRowsData = [
 
 
 function Chart (){
+    
+    const [products, setProducts] = useState([])
+    
+    useEffect (() => {
+        fetch('/api/products')
+            .then(result => result.json())
+            .then(data => {
+                setProducts(data.data)
+            })
+    })
+
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
             <div className="card-body">
                 <div className="table-responsive">
+                    <h2>Products in Database</h2>
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Categoría</th>
+                                <th>Material</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Nombre</th>
+                                <th>Descripción</th>
+                                <th>Categoría</th>
+                                <th>Material</th>
                             </tr>
                         </tfoot>
                         <tbody>
                             {
-                            tableRowsData.map( ( row , i) => {
-                                return <ChartRow { ...row} key={i}/>
+                            products.map( ( product , i) => {
+                                return <ChartRow { ...product} key={i}/>
                             })
                             }
 

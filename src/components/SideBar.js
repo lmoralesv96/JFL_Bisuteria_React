@@ -5,6 +5,7 @@ import GenresInDb from './GenresInDb';
 import LastMovieInDb from './LastMovieInDb';
 import ContentRowMovies from './ContentRowMovies';
 import SearchMovies from './SearchMovies';
+import Chart from './Chart';
 import NotFound from './NotFound';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -28,7 +29,7 @@ function SideBar(){
                 <li className="nav-item active">
                     <Link className="nav-link" to="/">
                         <i className="fas fa-fw fa-tachometer-alt"></i>
-                        <span>Dashboard - DH movies</span></Link>
+                        <span>Dashboard - JFL Bisuteria</span></Link>
                 </li>
 
                 {/*<!-- Divider -->*/}
@@ -41,7 +42,7 @@ function SideBar(){
                 <li className="nav-item">
                 <Link className="nav-link" to="/GenresInDb">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Categories</span>
                     </Link>
                 </li>
 
@@ -49,15 +50,24 @@ function SideBar(){
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastMovieInDb">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></Link>
+                        <span>Last Product</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/ContentRowMovies">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></Link>
+                        <span>Categories</span></Link>
                 </li>
+
+                {/*<!-- Nav Item - Products -->*/}
+                <li className="nav-item nav-link">
+                <Link className="nav-link" to="/Products">
+                        <i className="fas fa-fw fa-table"></i>
+                        <span>Products</span></Link>
+                </li>
+
+
 
                 {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider d-none d-md-block"/>
@@ -95,6 +105,9 @@ function SideBar(){
                 </Route>
                 <Route path="/SearchMovies">
                     <SearchMovies />
+                </Route>
+                <Route path="/Products">
+                    <Chart />
                 </Route>
                 <Route component={NotFound} />
             </Switch>
