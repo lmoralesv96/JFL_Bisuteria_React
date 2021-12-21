@@ -38,7 +38,7 @@ function Chart (){
         <div className="card shadow mb-4">
             <div className="card-body">
                 <div className="table-responsive">
-                    <h2>Products in Database</h2>
+                    <h2>Todos nuestros productos</h2>
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>

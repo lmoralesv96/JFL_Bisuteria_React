@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../assets/images/logo-DH.png';
+import image from '../assets/images/JFL-Logo.jpg';
 import ContentWrapper from './ContentWrapper';
 import GenresInDb from './GenresInDb';
 import LastMovieInDb from './LastMovieInDb';
@@ -41,30 +41,30 @@ function SideBar(){
                 {/*<!-- Nav Item - Pages -->*/}
                 <li className="nav-item">
                 <Link className="nav-link" to="/GenresInDb">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <span>Categories</span>
+                        <i className="fas fa-tags"></i>
+                        <span>Categorias</span>
                     </Link>
                 </li>
 
                 {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/LastMovieInDb">
-                        <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Last Product</span></Link>
+                        <i className="fas fa-plus-circle"></i>
+                        <span>Último producto</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Tables -->*/}
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/ContentRowMovies">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Categories</span></Link>
+                        <i className="fas fa-fw fa-chart-area"></i>
+                        <span>Totales</span></Link>
                 </li>
 
                 {/*<!-- Nav Item - Products -->*/}
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/Products">
-                        <i className="fas fa-fw fa-table"></i>
-                        <span>Products</span></Link>
+                        <i className="fas fa-shopping-bag"></i>
+                        <span>Productos</span></Link>
                 </li>
 
 
